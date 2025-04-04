@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  email-capture:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./emails_data:/app/emails_data
+    environment:
+      - PORT=3000
